@@ -11,20 +11,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: white;
             overflow: hidden;
-        }
-        button {
-            padding: 20px 40px;
-            font-size: 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 10px;
-            background-color: #4CAF50;
-            color: white;
+            background: black;
         }
         .rainbow {
-            animation: rainbow 3s infinite;
+            animation: rainbow 10s infinite;
             width: 100%;
             height: 100%;
             position: fixed;
@@ -33,34 +24,30 @@
             z-index: -1;
         }
         @keyframes rainbow {
-            0% { background: red; }
-            16% { background: orange; }
-            33% { background: yellow; }
-            50% { background: green; }
-            66% { background: blue; }
-            83% { background: indigo; }
-            100% { background: violet; }
+            0% { background-color: #FF0000; } /* 赤 */
+            14.3% { background-color: #FF7F00; } /* オレンジ */
+            28.6% { background-color: #FFFF00; } /* 黄色 */
+            42.9% { background-color: #00FF00; } /* 緑 */
+            57.1% { background-color: #00FFFF; } /* 水色 */
+            71.4% { background-color: #0000FF; } /* 青 */
+            85.7% { background-color: #8B00FF; } /* 紫 */
+            100% { background-color: #FF0000; } /* 赤に戻る */
         }
     </style>
 </head>
 <body>
-    <button id="startButton">スタート</button>
-
     <script>
-        document.getElementById('startButton').addEventListener('click', () => {
-            // 全画面表示に切り替える
-            if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen();
-            } else if (document.documentElement.webkitRequestFullscreen) { // Safari用
-                document.documentElement.webkitRequestFullscreen();
-            } else if (document.documentElement.msRequestFullscreen) { // IE/Edge用
-                document.documentElement.msRequestFullscreen();
-            }
-            
-            // 背景を虹色にする
-            document.body.innerHTML += '<div class="rainbow"></div>';
-        });
+        // 全画面表示に切り替える
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+        } else if (document.documentElement.webkitRequestFullscreen) { // Safari用
+            document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) { // IE/Edge用
+            document.documentElement.msRequestFullscreen();
+        }
+
+        // 背景を虹色にする
+        document.body.innerHTML = '<div class="rainbow"></div>';
     </script>
 </body>
 </html>
-
