@@ -14,7 +14,7 @@
             background: black;
         }
         .rainbow {
-            animation: rainbow 0.1s infinite;
+            animation: rainbow 3s infinite linear;
             width: 100vw;
             height: 100vh;
             position: fixed;
@@ -24,12 +24,13 @@
         }
         @keyframes rainbow {
             0% { background-color: #FF0000; }   /* 赤 */
-            14.3% { background-color: #FF7F00; } /* オレンジ */
-            28.6% { background-color: #FFFF00; } /* 黄色 */
-            42.9% { background-color: #00FF00; } /* 緑 */
-            57.1% { background-color: #00FFFF; } /* 水色 */
-            71.4% { background-color: #0000FF; } /* 青 */
-            85.7% { background-color: #8B00FF; } /* 紫 */
+            12.5% { background-color: #FF7F00; } /* オレンジ */
+            25% { background-color: #FFFF00; }   /* 黄色 */
+            37.5% { background-color: #00FF00; } /* 緑 */
+            50% { background-color: #00FFFF; }   /* 水色 */
+            62.5% { background-color: #0000FF; } /* 青 */
+            75% { background-color: #8B00FF; }   /* 紫 */
+            87.5% { background-color: #FF0000; } /* 赤 */
             100% { background-color: #FF0000; }  /* 赤に戻る */
         }
     </style>
